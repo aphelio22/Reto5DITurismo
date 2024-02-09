@@ -19,5 +19,6 @@ public class Museo implements Serializable {
     private String direccion;
     private String descripcion;
     private String tematica;
-    private String descuento;
+    @Enumerated(EnumType.STRING)
+    private Descuento descuento;
 }

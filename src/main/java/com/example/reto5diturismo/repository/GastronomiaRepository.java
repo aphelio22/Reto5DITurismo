@@ -6,4 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface GastronomiaRepository extends JpaRepository<Gastronomia, Integer> {
     public Gastronomia getGastronomiaById(Integer id);
+    public Gastronomia getGastronomiaByOrigen(String origen);
+    public Gastronomia getGastronomiaByNombre(String nombre);
 }
