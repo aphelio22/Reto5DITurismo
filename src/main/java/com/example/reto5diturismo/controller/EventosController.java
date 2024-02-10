@@ -48,7 +48,7 @@ public class EventosController {
         return eventoRepository.getEventoByTematica(tematica);
     }
 
-    @PostMapping("/evento")
+    @PostMapping("/evento/post")
     public ResponseEntity<Evento> nuevo(@RequestBody Evento evento, @RequestParam String token) {
         if (securityService.tokenDeValidacion(token)) {
             return new ResponseEntity<Evento>(eventoRepository.save(evento), HttpStatus.OK);
@@ -56,8 +56,7 @@ public class EventosController {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
     }
-/*
-    @PostMapping("/evento")
+    @PutMapping("/evento/put/{id}")
     public ResponseEntity<Evento> put(@PathVariable Integer id, @RequestBody Evento nuevoEvento, @RequestParam String token){
         if (!securityService.tokenDeValidacion(token)) {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
@@ -77,5 +76,19 @@ public class EventosController {
             return new ResponseEntity<Evento>(eventoRepository.save(evento), HttpStatus.OK);
         }
     }
-    */
+@DeleteMapping("/evento/delete/{id}")
+    public ResponseEntity<Evento> delete(@PathVariable Integer id,  @RequestParam String token){
+    ResponseEntity<Evento> respuesta = new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+    if( securityService.tokenDeValidacion(token) ){
+        Evento salida = new Evento();
+        if (eventoRepository.existsById(id)) {
+            salida = eventoRepository.findById(id).get();
+            eventoRepository.deleteById(id);
+            respuesta = new ResponseEntity<Evento>(salida, HttpStatus.OK);
+        } else {
+            respuesta = new ResponseEntity<Evento>(salida, HttpStatus.NOT_FOUND);
+        }
+    }
+    return respuesta;
+}
 }
