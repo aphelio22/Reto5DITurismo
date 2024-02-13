@@ -69,6 +69,18 @@ El controlador del recurso Museo contiene los siguientes EndPoints, partiendo de
 - @PutMapping("/museo/put/{id}"), actualiza un museo en la Base de Datos.
 - @DeleteMapping("/museo/delete/{id}"), elimina un museo de la Base de Datos.
 
+El controlador del recurso Punto de Interés los siguientes EndPoints, pariendo de la raíz @RequestMapping("/api/turismo"):
+- @GetMapping("/punto_interes"), obtiene todos los puntos de interés.
+- @GetMapping("/punto_interes/id/{id}"), obtiene un punto de interés por su id.
+- @GetMapping("/punto_interes/nombre/{nombre}"), obtiene un punto de interés por su nombre.
+- @PostMapping("/punto_interes/post"), introduce un nuevo punto de interés en la Base de Datos.
+- @PutMapping("/punto_interes/put/{id}"), actualiza un punto de interés en la Base de Datos.
+- @DeleteMapping("/punto_interes/delete/{id}"), borra un punto de interés de la Base de Datos.
+
+
+
+
+
 
 
 
