@@ -50,13 +50,31 @@ El controlador del recurso Evento contiene los siguientes EndPoints, partiendo d
 - @DeleteMapping("/evento/delete/{id}"), borra un evento de la Base de Datos.
 
 El controlador del recurso Gastronomia contiene los siguientes EndPoints, partiendo de la raíz @RequestMapping("/api/turismo"):
-@GetMapping("/gastronomia"), obtiene todos los platos gastronómicos.
-@GetMapping("/gastronomia/id/{id}"), obtiene un plato gastronómico por su id.
-@GetMapping("/gastronomia/origen/{origen}"), obtiene un plato gastronómico por su origen.
-@GetMapping("/gatronomia/nombre/{nombre}"), obtiene un plato gastronómico por su nombre.
-@PostMapping("/gastronomia/post"), introduce un nuevo plato gastronómico en la Base de Datos.
-@PutMapping("/gastronomia/put/{id}"), actualiza un nuevo plato gastronómico en la Base de Datos.
-@DeleteMapping("/gastronomia/delete/{id}"), elimina un plato gastronómico de la Base de Datos.
+- @GetMapping("/gastronomia"), obtiene todos los platos gastronómicos.
+- @GetMapping("/gastronomia/id/{id}"), obtiene un plato gastronómico por su id.
+- @GetMapping("/gastronomia/origen/{origen}"), obtiene un plato gastronómico por su origen.
+- @GetMapping("/gatronomia/nombre/{nombre}"), obtiene un plato gastronómico por su nombre.
+- @PostMapping("/gastronomia/post"), introduce un nuevo plato gastronómico en la Base de Datos.
+- @PutMapping("/gastronomia/put/{id}"), actualiza un plato gastronómico en la Base de Datos.
+- @DeleteMapping("/gastronomia/delete/{id}"), elimina un plato gastronómico de la Base de Datos.
+
+El controlador del recurso Museo contiene los siguientes EndPoints, partiendo de la raíz @RequestMapping("/api/turismo"):
+- @GetMapping("/museo"), obtiene todos los museos.
+- @GetMapping("/museo/id/{id}"), obtiene un museo por su id.
+- @GetMapping("/museo/nombre/{nombre}"), obtiene un museo por su nombre.
+- @GetMapping("/museo/precio/{precio}"), obtiene todos los museos con un precio inferior al introducido.
+- @GetMapping("/museo/tematica/{tematica}"), obtiene todos los museos con una temática concreta.
+- @GetMapping("/museo/descuento/{descuento}"), obtiene todos los museos con un descuento concreto.
+- @PostMapping("/museo/post"), introduce un nuevo museo en la Base de Datos.
+- @PutMapping("/museo/put/{id}"), actualiza un museo en la Base de Datos.
+- @DeleteMapping("/museo/delete/{id}"), elimina un museo de la Base de Datos.
+
+
+
+
+
+
+
 
 
 
