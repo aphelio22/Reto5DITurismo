@@ -2,7 +2,7 @@
 
 # ApiTurismo
 ## Recursos utilizados:
-Para los recursos que se usarán como modelo en la aplicación se ha creado una base de datos con 4 tablas,
+Para los recursos que se usarán como modelo en la aplicación se ha creado una Base de Datos con 4 tablas,
 que se corresponden a los 4 recursos: evento, gastronomía, museo y punto de interés. Cada uno de estos con sus respectivos
 atributos:
 
