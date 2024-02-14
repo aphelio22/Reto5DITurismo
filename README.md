@@ -77,6 +77,10 @@ El controlador del recurso Punto de Interés los siguientes EndPoints, pariendo 
 - @PutMapping("/punto_interes/put/{id}"), actualiza un punto de interés en la Base de Datos.
 - @DeleteMapping("/punto_interes/delete/{id}"), borra un punto de interés de la Base de Datos.
 
+A esto hay que añadirle el uso de un token de seguridad que los usuarios que quieran subir, modificar o eliminar datos, deben usar. Definido en la clase
+Security Service:
+-  public Boolean tokenDeValidacion(String token) { return (token.equals("t0k3n")); }
+
 
 
 
