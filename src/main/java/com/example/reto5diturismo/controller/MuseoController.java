@@ -96,7 +96,7 @@ public class MuseoController {
     public List<Museo> getMuseobyDescuento(@PathVariable Descuento descuento) {
         return museoRepository.getMuseoByDescuento(descuento);
     }
-
+//
     /**
      * Crea un nuevo museo.
      *

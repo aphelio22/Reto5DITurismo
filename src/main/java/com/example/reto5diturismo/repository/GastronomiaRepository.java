@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Interfaz que proporciona métodos de acceso a datos para la entidad {@code Gastronomia}.
  */
-public interface GastronomiaRepository extends JpaRepository<Gastronomia, Integer> {
+public interface GastronomiaRepository extends JpaRepository<Gastronomia, Integer> {//
     /**
      * Obtiene un plato gastronómico por su identificador único.
      *
