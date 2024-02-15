@@ -63,7 +63,6 @@ public class GastronomiaController {
     public List<Gastronomia> getGastroPlatobyOrigen(@PathVariable String origen) {
         return gastronomiaRepository.getGastronomiaByOrigen(origen);
     }
-//
     /**
      * Obtiene un plato gastronómico por su nombre.
      *

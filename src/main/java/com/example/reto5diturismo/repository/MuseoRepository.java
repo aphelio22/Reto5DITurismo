@@ -48,5 +48,5 @@ public interface MuseoRepository extends JpaRepository<Museo, Integer> {
      * @param descuento El tipo de descuento aplicable a los museos.
      * @return Una lista de museos que ofrecen el descuento proporcionado.
      */
-    public List<Museo> getMuseoByDescuento(Descuento descuento);//
+    public List<Museo> getMuseoByDescuento(Descuento descuento);
 }
