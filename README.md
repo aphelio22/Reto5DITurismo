@@ -81,7 +81,8 @@ A esto hay que añadirle el uso de un token de seguridad que los usuarios que qu
 Security Service:
 -  public Boolean tokenDeValidacion(String token) { return (token.equals("t0k3n")); }
 
-
+## Ejemplos:
+Los ejemplos se explicarán en el vídeo.
 
 
 
