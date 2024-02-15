@@ -93,7 +93,7 @@ public class MuseoController {
      * @return Lista de museos que ofrecen el descuento proporcionado.
      */
     @GetMapping("/museo/descuento/{descuento}")
-    public List<Museo> getMuseobyDescuento(@PathVariable String descuento) {
+    public List<Museo> getMuseobyDescuento(@PathVariable Descuento descuento) {
         return museoRepository.getMuseoByDescuento(descuento);
     }
 

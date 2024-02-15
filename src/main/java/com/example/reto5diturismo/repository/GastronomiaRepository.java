@@ -4,6 +4,8 @@ import com.example.reto5diturismo.model.Evento;
 import com.example.reto5diturismo.model.Gastronomia;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 /**
  * Interfaz que proporciona métodos de acceso a datos para la entidad {@code Gastronomia}.
  */
@@ -22,7 +24,7 @@ public interface GastronomiaRepository extends JpaRepository<Gastronomia, Intege
      * @param origen El origen del plato gastronómico, indicando la región o país de donde proviene.
      * @return El plato gastronómico con el origen proporcionado, o {@code null} si no se encuentra.
      */
-    public Gastronomia getGastronomiaByOrigen(String origen);
+    public List<Gastronomia> getGastronomiaByOrigen(String origen);
 
     /**
      * Obtiene un plato gastronómico por su nombre.

@@ -60,7 +60,7 @@ public class GastronomiaController {
      * @return El plato gastronómico con el origen proporcionado.
      */
     @GetMapping("/gastronomia/origen/{origen}")
-    public Gastronomia getGastroPlatobyOrigen(@PathVariable String origen) {
+    public List<Gastronomia> getGastroPlatobyOrigen(@PathVariable String origen) {
         return gastronomiaRepository.getGastronomiaByOrigen(origen);
     }
 

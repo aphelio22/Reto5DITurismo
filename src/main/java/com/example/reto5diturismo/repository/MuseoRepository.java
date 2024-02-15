@@ -1,5 +1,6 @@
 package com.example.reto5diturismo.repository;
 
+import com.example.reto5diturismo.enums.Descuento;
 import com.example.reto5diturismo.model.Museo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -47,5 +48,5 @@ public interface MuseoRepository extends JpaRepository<Museo, Integer> {
      * @param descuento El tipo de descuento aplicable a los museos.
      * @return Una lista de museos que ofrecen el descuento proporcionado.
      */
-    public List<Museo> getMuseoByDescuento(String descuento);
+    public List<Museo> getMuseoByDescuento(Descuento descuento);
 }
